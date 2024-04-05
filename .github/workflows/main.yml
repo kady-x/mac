@@ -5,11 +5,11 @@ on: [push, workflow_dispatch]
 jobs:
   build:
 
-    runs-on: MacOS-latest
+    runs-on: darwin-latest
 
     steps:
     - name: Download
-      run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-darwin-arm64.zip -OutFile ngrok.zip
+      run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-darwin-amd64.zip -OutFile ngrok.zip
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
